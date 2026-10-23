@@ -29,9 +29,7 @@ from src.registration import (
 )
 
 
-# ---------------------------------------
-# Statement and Branch Coverage Tests
-# ---------------------------------------
+
 
 @pytest.mark.boundary
 def test_empty_batch():
@@ -61,10 +59,7 @@ def test_mixed_batch():
     assert summarize_batch_registrations(requests) == (2, 1725.0)
 
 
-# ---------------------------------------
-# Data-Flow Testing
-# Loop-Carried DU Pair
-# ---------------------------------------
+
 
 @pytest.mark.positive
 def test_two_approved_registrations():
@@ -76,9 +71,7 @@ def test_two_approved_registrations():
     assert summarize_batch_registrations(requests) == (2, 1725.0)
 
 
-# ---------------------------------------
-# Test Doubles - Notifier
-# ---------------------------------------
+
 
 @pytest.mark.positive
 def test_enroll_student_approved(mock_notifier):
